@@ -2,12 +2,14 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import home from './Screens//home';
-import login from './Screens/login';
+import Login from './Screens/login';
 import signup from './Screens/signup';
 import forgotpass from './Screens/forgotpass';
 import ip from './Screens/ip';
-
-//init commit
+import otp from './Screens/otp';
+import main from './Screens/main';
+import newpass from './Screens/newpass';
+import fpotp from './Screens/fpotp';
 
 const stack = createStackNavigator();
 const Stacknavigator = () => {
@@ -15,16 +17,35 @@ const Stacknavigator = () => {
     <stack.Navigator>
       <stack.Screen
         options={{headerShown: false}}
-        name="main"
+        name="home"
         component={home}
       />
+
+      <stack.Screen
+        options={{
+          title: 'Main',
+          headerStyle: {backgroundColor: '#0096FF'},
+        }}
+        name="main"
+        component={main}
+      />
+
+      <stack.Screen
+        options={{
+          title: 'newpass',
+          headerStyle: {backgroundColor: '#0096FF'},
+        }}
+        name="newpass"
+        component={newpass}
+      />
+
       <stack.Screen
         options={{
           title: 'Log in',
           headerStyle: {backgroundColor: '#0096FF'},
         }}
         name="login"
-        component={login}
+        component={Login}
       />
       <stack.Screen
         options={{
@@ -36,12 +57,31 @@ const Stacknavigator = () => {
       />
       <stack.Screen
         options={{
-          title: 'Forgot pass',
+          title: 'forgotpass',
           headerStyle: {backgroundColor: '#0096FF'},
         }}
         name="forgotpass"
         component={forgotpass}
       />
+
+      <stack.Screen
+        options={{
+          title: 'fpotp',
+          headerStyle: {backgroundColor: '#0096FF'},
+        }}
+        name="fpotp"
+        component={fpotp}
+      />
+
+      <stack.Screen
+        options={{
+          title: 'otp',
+          headerStyle: {backgroundColor: '#0096FF'},
+        }}
+        name="otp"
+        component={otp}
+      />
+
       <stack.Screen
         options={{
           title: 'Ip',

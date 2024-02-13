@@ -4,11 +4,11 @@ import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 const home = props => {
   return (
     <View style={styles.Main}>
-      <TouchableOpacity onPress={() => props.navigation.navigate('ip')}>
+      <TouchableOpacity>
         <Image style={styles.img} source={require('../Assets/Imgs/l.jpeg')} />
       </TouchableOpacity>
       <View style={styles.con}>
-        <Text style={styles.Skychords}>SkyCords</Text>
+        <Text style={styles.Skychords}>SkyChords</Text>
 
         {/*login button*/}
         <TouchableOpacity
@@ -30,7 +30,7 @@ const home = props => {
 
 const styles = StyleSheet.create({
   Main: {
-    flex: 1,
+    flex : 1,
     backgroundColor: 'whitesmoke',
     padding: 60,
   },
