@@ -1,189 +1,163 @@
-import React, {useState} from 'react';
-import axios, { formToJSON } from 'axios';
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  Animated,
-  Alert
-} from 'react-native';
+import React, { useState } from "react";
+import axios, { formToJSON } from "axios";
+import { Alert } from "react-native";
+import { VStack, Text, Image, Input, Pressable } from "native-base";
 
-const signup = props => {
-  const server = axios.create({baseURL: "http://localhost:5000"})
-  const [username, setUsername] = useState('');
-  const [password, setPass] = useState('');
-  const [cpassword, setCpass] = useState('');
+const Signup = (props) => {
+  const server = axios.create({ baseURL: "http://localhost:5000" });
+  const [username, setUsername] = useState("");
+  const [password, setPass] = useState("");
+  const [cpassword, setCpass] = useState("");
   const [passwordShow, setPassShow] = useState(false);
   const [cpasswordShow, setCPassShow] = useState(false);
   const [EmailShow, setEmailShow] = useState(false);
-  
-  const FireApi = async() =>{
-    console.log(username,password,cpassword)
-    if (username == '' | password == '' | cpassword == ''){
-      CheckFields()
+
+  const FireApi = async () => {
+    console.log(username, password, cpassword);
+    if ((username == "") | (password == "") | (cpassword == "")) {
+      CheckFields();
       return;
-    }
-    else if (password == cpassword){
+    } else if (password == cpassword) {
       data = {
         user: username,
       };
-      const resp = await server.post('/getotp',data).then((response)=>{flag = response.data['flag']}).catch(error => console.log(error));
-      console.log(flag)
-      if(flag){
-        props.navigation.navigate('otp',{
-          username : username,
-          password : password,
+      const resp = await server
+        .post("/getotp", data)
+        .then((response) => {
+          flag = response.data["flag"];
         })
-      }
-      else if (!flag){
-        Alert.alert("Account already Exists","Email you entered is already being used. Try to login?")
+        .catch((error) => console.log(error));
+      console.log(flag);
+      if (flag) {
+        props.navigation.navigate("otp", {
+          username: username,
+          password: password,
+        });
+      } else if (!flag) {
+        Alert.alert(
+          "Account already Exists",
+          "Email you entered is already being used. Try to login?"
+        );
       }
     }
-    
-  }
-  const PasswordMandatory = () =>{
-    return(
-    <View>
-      <Text style ={styles.passwordText}>Password is mandatory **</Text>
-    </View>
-    )
-  }
+  };
+  const PasswordMandatory = () => {
+    return (
+      <VStack>
+        <Text color="red.600">Password is mandatory **</Text>
+      </VStack>
+    );
+  };
 
-  const CPasswordMandatory = () =>{
-    return(
-    <View>
-      <Text style ={styles.passwordText}>Confirm Password is mandatory **</Text>
-    </View>
-    )
-  }
+  const CPasswordMandatory = () => {
+    return (
+      <VStack>
+        <Text color="red.600">Confirm Password is mandatory **</Text>
+      </VStack>
+    );
+  };
 
-  const EmailMandatory = () =>{
-    return(
-    <View>
-      <Text style ={styles.passwordText}>Email is mandatory **</Text>
-    </View>
-    )
-  }
+  const EmailMandatory = () => {
+    return (
+      <VStack>
+        <Text color="red.600">Email is mandatory **</Text>
+      </VStack>
+    );
+  };
 
-  const CheckFields = () =>{
-    if (password == ''){
+  const CheckFields = () => {
+    if (password == "") {
       setPassShow(true);
     }
-    if (cpassword == ''){
+    if (cpassword == "") {
       setCPassShow(true);
     }
-    if (username == ''){
-      setEmailShow(true)
+    if (username == "") {
+      setEmailShow(true);
     }
-  }
+  };
 
   return (
-    <View style={styles.Main}>
-      <View style={styles.Header}>
-        <Image style={styles.img} source={require('../Assets/Imgs/l.jpeg')} />
-      </View>
+    <VStack flex="1" backgroundColor="whitesmoke">
+      <VStack flex="1" justifyContent="center" alignItems="center">
+        <Image
+          width="150px"
+          height="150px"
+          resizeMode="stretch"
+          source={require("../Assets/Imgs/l.jpeg")}
+        />
+      </VStack>
 
-      <View style={styles.Footer}>
-        <Text style={styles.Logintxt}>Sign up.....</Text>
+      <VStack
+        flex="2"
+        backgroundColor="#89CFF0"
+        borderTopLeftRadius="30px"
+        borderTopRightRadius="30px"
+        px="30px"
+        py="50px"
+      >
+        <Text fontSize="30px">Sign up.....</Text>
 
         {/*email textinput*/}
-        <TextInput style={styles.Emailinput} placeholder="Your Email" 
-        onChangeText={username => {setUsername(username),setEmailShow(false)}}
+        <Input
+          marginTop="20px"
+          paddingLeft="10px"
+          backgroundColor="whitesmoke"
+          borderRadius="10px"
+          placeholder="Your Email"
+          onChangeText={(username) => {
+            setUsername(username), setEmailShow(false);
+          }}
         />
-        {
-          EmailShow == true ? <EmailMandatory/> : null
-        }
-
+        {EmailShow == true ? <EmailMandatory /> : null}
 
         {/*password textinput*/}
-        <TextInput
+        <Input
           secureTextEntry={true}
-          style={styles.Passinput}
+          marginTop="20px"
+          paddingLeft="10px"
+          backgroundColor="whitesmoke"
+          borderRadius="10px"
           placeholder="Your Password"
-          onChangeText={password => {setPass(password),setPassShow(false)}}
-          />
-         
-          {
-          passwordShow == true ? <PasswordMandatory/> : null
-          }
-
-        {/*confirm password textinput*/}
-        <TextInput
-          secureTextEntry={true}
-          style={styles.Passinput}
-          placeholder="Comfirm Your Password"
-          onChangeText={cpassword => {setCpass(cpassword),setCPassShow(false)}}
+          onChangeText={(password) => {
+            setPass(password), setPassShow(false);
+          }}
         />
 
-        {
-          cpasswordShow == true ? <CPasswordMandatory/> : null
-        }
+        {passwordShow == true ? <PasswordMandatory /> : null}
+
+        {/*confirm password textinput*/}
+        <Input
+          secureTextEntry={true}
+          marginTop="20px"
+          paddingLeft="10px"
+          backgroundColor="whitesmoke"
+          borderRadius="10px"
+          placeholder="Comfirm Your Password"
+          onChangeText={(cpassword) => {
+            setCpass(cpassword), setCPassShow(false);
+          }}
+        />
+
+        {cpasswordShow == true ? <CPasswordMandatory /> : null}
 
         {/*register button*/}
-        <TouchableOpacity style={styles.Registerbtn}
-          onPress={async() => {
-            FireApi()
+        <Pressable
+          backgroundColor="whitesmoke"
+          alignItems="center"
+          height="40px"
+          borderRadius="10px"
+          justifyContent="center"
+          marginTop="20px"
+          onPress={async () => {
+            FireApi();
           }}
         >
-          <Text style={{color: 'black'}}>Register</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
+          <Text color="black">Register</Text>
+        </Pressable>
+      </VStack>
+    </VStack>
   );
 };
-const styles = StyleSheet.create({
-  Main: {
-    flex: 1,
-    backgroundColor: 'whitesmoke',
-  },
 
-  Header: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  Footer: {
-    flex: 2,
-    backgroundColor: '#89CFF0',
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    paddingHorizontal: 30,
-    paddingVertical: 50,
-  },
-  Emailinput: {
-    marginTop: 20,
-    paddingLeft: 10,
-    backgroundColor: 'whitesmoke',
-    borderRadius: 10,
-  },
-  Passinput: {
-    marginTop: 20,
-    paddingLeft: 10,
-    backgroundColor: 'whitesmoke',
-    borderRadius: 10,
-  },
-  Registerbtn: {
-    backgroundColor: 'whitesmoke',
-    alignItems: 'center',
-    height: 40,
-    borderRadius: 10,
-    justifyContent: 'center',
-    marginTop: 20,
-  },
-  img: {
-    width: 150,
-    height: 150,
-    resizeMode: 'stretch',
-  },
-  Logintxt: {
-    fontSize: 30,
-  },
-  passwordText:{
-    color : 'red',
-  },
-});
-
-export default signup;
+export default Signup;

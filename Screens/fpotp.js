@@ -1,122 +1,145 @@
-import axios from 'axios';
-import React, {useState} from 'react';
+import axios from "axios";
+import { VStack, Text, Input, Pressable } from "native-base";
+import React, { useState } from "react";
 import {
   StyleSheet,
-  Text,
   View,
   TouchableOpacity,
   TextInput,
-  Alert
-} from 'react-native';
+  Alert,
+} from "react-native";
 
-const otp = props => {
-  const username = props.route.params['username']
-//   const password = props.route.params['password']
-  const [otpShow,setMotp] = useState(false)
-  const [otp, setotp] = useState('');
-  const server = axios.create({baseURL: "http://localhost:5000"})
+const Otp = (props) => {
+  const username = props.route.params["username"];
+  //   const password = props.route.params['password']
+  const [otpShow, setMotp] = useState(false);
+  const [otp, setotp] = useState("");
+  const server = axios.create({ baseURL: "http://localhost:5000" });
 
-  const FireApi = async() =>{
-    if (otp == ''){
-      setMotp(true)
+  const FireApi = async () => {
+    if (otp == "") {
+      setMotp(true);
       return;
     }
-    console.log("inside")
+    console.log("inside");
     data = {
       user: username,
-      otp : otp
+      otp: otp,
     };
-    const resp = await server.post('/checkotp',data).then((response)=>{flag = response.data['flag']}).catch(error => console.log(error));
-    console.log(flag)
-    if (flag == true){
-      props.navigation.navigate('newpass',{
-        username: username,
+    const resp = await server
+      .post("/checkotp", data)
+      .then((response) => {
+        flag = response.data["flag"];
       })
+      .catch((error) => console.log(error));
+    console.log(flag);
+    if (flag == true) {
+      props.navigation.navigate("newpass", {
+        username: username,
+      });
     }
-    if(flag == false){
-      Alert.alert("Incorrect OTP","OTP you entered is incorrect!")
+    if (flag == false) {
+      Alert.alert("Incorrect OTP", "OTP you entered is incorrect!");
     }
-  }
+  };
 
-  const OtpMandatory = () =>{
-    return(
-    <View>
-      <Text style ={styles.passwordText}>OTP is mandatory **</Text>
-    </View>
-    )
-  }
+  const OtpMandatory = () => {
+    return (
+      <VStack>
+        <Text color="red.700">OTP is mandatory **</Text>
+      </VStack>
+    );
+  };
 
   return (
-    <View style={styles.main}>
-      <Text style={styles.welcome}>Enter Your OTP.</Text>
-      <Text style={styles.welcome2}>
-        We have sent you the otp in your entered username .wait for a while
-        for the otp or check your spam section.
+    <VStack
+      flex="2"
+      backgroundColor="whitesmoke"
+      paddingHorizontal="30px"
+      paddingVertical="50px"
+    >
+      <Text alignSelf="center" color="#0096FF" fontSize="30px" marginTop="40px">
+        Enter Your OTP.
       </Text>
-      <TextInput
+      <Text alignSelf="center" color="#0096FF" fontSize="15px" marginTop="15px">
+        We have sent you the otp in your entered username .wait for a while for
+        the otp or check your spam section.
+      </Text>
+      <Input
         maxLength={5}
         keyboardType="numeric"
-        style={styles.textinput}
+        marginTop="20px"
+        paddingLeft="10px"
+        backgroundColor="#89CFF0"
+        borderRadius="10px"
         placeholder="Your OTP"
-        onChangeText={text => {setotp(Number(text)),setMotp(false)}}
+        onChangeText={(text) => {
+          setotp(Number(text)), setMotp(false);
+        }}
       />
-      {
-          otpShow == true ? <OtpMandatory/> : null
-      }
-      <TouchableOpacity
-        style={styles.button2}
+      {otpShow == true ? <OtpMandatory /> : null}
+      <Pressable
+        width="190px"
+        backgroundColor="#89CFF0"
+        alignItems="center"
+        height="45px"
+        borderRadius="10px"
+        justifyContent="center"
+        marginTop="30px"
+        marginLeft="160px"
         onPress={() => {
-          FireApi()
-        }}>
-        <Text style={{color: '#0096FF'}}>Register</Text>
-      </TouchableOpacity>
+          FireApi();
+        }}
+      >
+        <Text color="#0096FF">Register</Text>
+      </Pressable>
       {/*send button*/}
-    </View>
+    </VStack>
   );
 };
 const styles = StyleSheet.create({
   welcome: {
-    alignSelf: 'center',
-    color: '#0096FF',
+    alignSelf: "center",
+    color: "#0096FF",
     fontSize: 30,
     marginTop: 40,
   },
   main: {
     flex: 2,
-    backgroundColor: 'whitesmoke',
+    backgroundColor: "whitesmoke",
     paddingHorizontal: 30,
     paddingVertical: 50,
   },
   button2: {
     width: 190,
-    backgroundColor: '#89CFF0',
-    alignItems: 'center',
+    backgroundColor: "#89CFF0",
+    alignItems: "center",
     height: 45,
     borderRadius: 10,
-    justifyContent: 'center',
+    justifyContent: "center",
     marginTop: 30,
     marginLeft: 160,
   },
 
   img: {
-    justifyContent: 'center',
-    alignSelf: 'center',
+    justifyContent: "center",
+    alignSelf: "center",
   },
   textinput: {
     marginTop: 20,
     paddingLeft: 10,
-    backgroundColor: '#89CFF0',
+    backgroundColor: "#89CFF0",
     borderRadius: 10,
   },
   welcome2: {
-    alignSelf: 'center',
-    color: '#0096FF',
+    alignSelf: "center",
+    color: "#0096FF",
     fontSize: 15,
     marginTop: 15,
   },
-  passwordText:{
-    color : 'red',
+  passwordText: {
+    color: "red",
   },
 });
 
-export default otp;
+export default Otp;

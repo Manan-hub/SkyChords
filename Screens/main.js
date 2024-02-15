@@ -1,7 +1,7 @@
-import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 
-const main = props => {
+const Main = (props) => {
   return (
     <View style={styles.Main}>
       {/* <TouchableOpacity>
@@ -30,42 +30,42 @@ const main = props => {
 
 const styles = StyleSheet.create({
   Main: {
-    flex : 1,
-    backgroundColor: 'whitesmoke',
+    flex: 1,
+    backgroundColor: "whitesmoke",
     padding: 60,
   },
   con: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginTop: 100,
   },
   Skychords: {
-    alignSelf: 'center',
-    color: '#0096FF',
+    alignSelf: "center",
+    color: "#0096FF",
     fontSize: 40,
   },
-//   Login: {
-//     width: 210,
-//     backgroundColor: '#89CFF0',
-//     alignItems: 'center',
-//     height: 40,
-//     borderRadius: 10,
-//     justifyContent: 'center',
-//     marginTop: 30,
-//   },
-//   Signup: {
-//     width: 210,
-//     backgroundColor: '#89CFF0',
-//     alignItems: 'center',
-//     height: 40,
-//     borderRadius: 10,
-//     justifyContent: 'center',
-//     marginTop: 10,
-//   },
+  //   Login: {
+  //     width: 210,
+  //     backgroundColor: '#89CFF0',
+  //     alignItems: 'center',
+  //     height: 40,
+  //     borderRadius: 10,
+  //     justifyContent: 'center',
+  //     marginTop: 30,
+  //   },
+  //   Signup: {
+  //     width: 210,
+  //     backgroundColor: '#89CFF0',
+  //     alignItems: 'center',
+  //     height: 40,
+  //     borderRadius: 10,
+  //     justifyContent: 'center',
+  //     marginTop: 10,
+  //   },
   img: {
-    justifyContent: 'center',
-    alignSelf: 'center',
+    justifyContent: "center",
+    alignSelf: "center",
   },
 });
 
-export default main;
+export default Main;

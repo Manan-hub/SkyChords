@@ -1,29 +1,17 @@
-import React, {useState} from 'react';
-import axios, { formToJSON } from 'axios';
-// import { VStack } from 'native-base';
-import {Alert, ToastAndroid} from 'react-native';
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TouchableOpacity,
-  TextInput,
-} from 'react-native';
-import { or } from 'react-native-reanimated';
+import React, { useState } from "react";
+import axios from "axios";
+import { VStack, Text, Image, Input, Pressable } from "native-base";
+import { Alert } from "react-native";
 
-
-
-const Login = props => {
-  const server = axios.create({baseURL: "http://localhost:5000"})
-  const [username, setUsername] = useState('');
-  const [password, setPass] = useState('');
+const Login = (props) => {
+  const server = axios.create({ baseURL: "http://localhost:5000" });
+  const [username, setUsername] = useState("");
+  const [password, setPass] = useState("");
   const [passwordShow, setPassShow] = useState(false);
   const [EmailShow, setEmailShow] = useState(false);
 
-
-  const FireApi = async() =>{
-    if (username == '' | password == ''){
+  const FireApi = async () => {
+    if ((username == "") | (password == "")) {
       console.log("Empty");
       return;
     }
@@ -31,150 +19,121 @@ const Login = props => {
       user: username,
       passw: password,
     };
-    const resp = await server.post('/login',data).then((response)=>{flag = response.data['flag']}).catch(error => console.log(error));
-    console.log(flag)
-    if (flag == true){
-      props.navigation.navigate('main')
+    const resp = await server
+      .post("/login", data)
+      .then((response) => {
+        flag = response.data["flag"];
+      })
+      .catch((error) => console.log(error));
+    console.log(flag);
+    if (flag == true) {
+      props.navigation.navigate("main");
+    } else {
+      Alert.alert("Incorrect Credentials!", "Email or password incorrect.");
     }
-    else{
-      Alert.alert("Incorrect Credentials!","Email or password incorrect.")
-    }
-  }
+  };
 
-  const PasswordMandatory = () =>{
-    return(
-    <View>
-      <Text style ={styles.passwordText}>Password is mandatory **</Text>
-    </View>
-    )
-  }
+  const PasswordMandatory = () => {
+    return (
+      <VStack>
+        <Text color="red">Password is mandatory **</Text>
+      </VStack>
+    );
+  };
 
-  const EmailMandatory = () =>{
-    return(
-    <View>
-      <Text style ={styles.passwordText}>Email is mandatory **</Text>
-    </View>
-    )
-  }
+  const EmailMandatory = () => {
+    return (
+      <VStack>
+        <Text color="red">Email is mandatory **</Text>
+      </VStack>
+    );
+  };
 
-
-  const CheckFields = () =>{
-    if (password == ''){
+  const CheckFields = () => {
+    if (password == "") {
       setPassShow(true);
     }
-    if (username == ''){
-      setEmailShow(true)
+    if (username == "") {
+      setEmailShow(true);
     }
-  }
+  };
 
   return (
-    <View style={styles.Main}>
-      <View style={styles.Header}>
-        <Image style={styles.img} source={require('../Assets/Imgs/l.jpeg')} />
-      </View>
-      <View style={styles.Footer}>
-        <Text style={styles.Logintxt}>Log in.....</Text>
+    <VStack flex="1" backgroundColor="whitesmoke">
+      <VStack flex="1" justifyContent="center" alignItems="center">
+        <Image
+          width="150px"
+          height="150px"
+          resizeMode="stretch"
+          source={require("../Assets/Imgs/l.jpeg")}
+        />
+      </VStack>
+      <VStack
+        flex="2"
+        backgroundColor="#89CFF0"
+        borderTopLeftRadius="30px"
+        borderTopRightRadius="30px"
+        px="30px"
+        py="50px"
+      >
+        <Text fontSize="30px">Log in.....</Text>
 
         {/*Email textinput*/}
-        <TextInput 
-          style={styles.Emailinput}
+        <Input
+          marginTop="20px"
+          paddingLeft=" 10px"
+          backgroundColor="whitesmoke"
+          borderRadius="10px"
           placeholder="Your Email"
           // onChangeText={newUsername => setUsername(newUsername)}
-          onChangeText={username => {setUsername(username),setEmailShow(false)}}
-          />
-        {
-          EmailShow == true ? <EmailMandatory/> : null
-        }
-
+          onChangeText={(username) => {
+            setUsername(username), setEmailShow(false);
+          }}
+        />
+        {EmailShow == true ? <EmailMandatory /> : null}
 
         {/*password textinput*/}
-        <TextInput
+        <Input
           secureTextEntry={true}
-          style={styles.Passinput}
+          marginTop="20px"
+          paddingLeft=" 10px"
+          backgroundColor="whitesmoke"
+          borderRadius="10px"
           placeholder="Your Password"
-          onChangeText={password => {setPass(password),setPassShow(false)}}
+          onChangeText={(password) => {
+            setPass(password), setPassShow(false);
+          }}
         />
 
-          {
-          passwordShow == true ? <PasswordMandatory/> : null
-          }
+        {passwordShow == true ? <PasswordMandatory /> : null}
 
         {/*log in button*/}
-        <TouchableOpacity style={styles.Loginbtn}
-          onPress={async() => {
-            FireApi()
-            CheckFields()
+        <Pressable
+          backgroundColor="whitesmoke"
+          alignItems="center"
+          height="40px"
+          borderRadius="10px"
+          justifyContent="center"
+          marginTop="20px"
+          onPress={async () => {
+            FireApi();
+            CheckFields();
           }}
         >
-          <Text style={{color: 'black'}}>Log in</Text>
-        </TouchableOpacity>
+          <Text color="black">Log in</Text>
+        </Pressable>
 
         {/*forgotpass button*/}
-        <TouchableOpacity
-          style={styles.Forgotpass}
-          onPress={() => props.navigation.navigate('forgotpass')}>
-          <Text style={{color: 'black'}}>Forgot your password?</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
+        <Pressable
+          marginTop="20px"
+          alignSelf="flex-end"
+          onPress={() => props.navigation.navigate("forgotpass")}
+        >
+          <Text color="black">Forgot your password?</Text>
+        </Pressable>
+      </VStack>
+    </VStack>
   );
 };
-
-
-
-const styles = StyleSheet.create({
-  Main: {
-    flex: 1,
-    backgroundColor: 'whitesmoke',
-  },
-  Header: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  Footer: {
-    flex: 2,
-    backgroundColor: '#89CFF0',
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    paddingHorizontal: 30,
-    paddingVertical: 50,
-  },
-  Emailinput: {
-    marginTop: 20,
-    paddingLeft: 10,
-    backgroundColor: 'whitesmoke',
-    borderRadius: 10,
-  },
-  Passinput: {
-    marginTop: 20,
-    paddingLeft: 10,
-    backgroundColor: 'whitesmoke',
-    borderRadius: 10,
-  },
-  Loginbtn: {
-    backgroundColor: 'whitesmoke',
-    alignItems: 'center',
-    height: 40,
-    borderRadius: 10,
-    justifyContent: 'center',
-    marginTop: 20,
-  },
-  Forgotpass: {
-    marginTop: 20,
-    alignSelf: 'flex-end',
-  },
-  img: {
-    width: 150,
-    height: 150,
-    resizeMode: 'stretch',
-  },
-  Logintxt: {
-    fontSize: 30,
-  },
-  passwordText:{
-    color : 'red',
-  },
-});
 
 export default Login;
