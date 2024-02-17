@@ -1,13 +1,7 @@
 import axios from "axios";
 import { VStack, Text, Input, Pressable } from "native-base";
 import React, { useState } from "react";
-import {
-  StyleSheet,
-  View,
-  TouchableOpacity,
-  TextInput,
-  Alert,
-} from "react-native";
+import { StyleSheet, Alert } from "react-native";
 
 const Otp = (props) => {
   const username = props.route.params["username"];
@@ -97,49 +91,5 @@ const Otp = (props) => {
     </VStack>
   );
 };
-const styles = StyleSheet.create({
-  welcome: {
-    alignSelf: "center",
-    color: "#0096FF",
-    fontSize: 30,
-    marginTop: 40,
-  },
-  main: {
-    flex: 2,
-    backgroundColor: "whitesmoke",
-    paddingHorizontal: 30,
-    paddingVertical: 50,
-  },
-  button2: {
-    width: 190,
-    backgroundColor: "#89CFF0",
-    alignItems: "center",
-    height: 45,
-    borderRadius: 10,
-    justifyContent: "center",
-    marginTop: 30,
-    marginLeft: 160,
-  },
-
-  img: {
-    justifyContent: "center",
-    alignSelf: "center",
-  },
-  textinput: {
-    marginTop: 20,
-    paddingLeft: 10,
-    backgroundColor: "#89CFF0",
-    borderRadius: 10,
-  },
-  welcome2: {
-    alignSelf: "center",
-    color: "#0096FF",
-    fontSize: 15,
-    marginTop: 15,
-  },
-  passwordText: {
-    color: "red",
-  },
-});
 
 export default Otp;
