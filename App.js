@@ -17,12 +17,6 @@ const Stacknavigator = () => {
   return (
     <stack.Navigator>
       <stack.Screen
-        options={{ headerShown: false }}
-        name="home"
-        component={Home}
-      />
-
-      <stack.Screen
         options={{
           title: "Main",
           headerStyle: { backgroundColor: "#0096FF" },
@@ -30,6 +24,20 @@ const Stacknavigator = () => {
         name="main"
         component={Main}
       />
+      <stack.Screen
+        options={{ headerShown: false }}
+        name="home"
+        component={Home}
+      />
+
+      {/* <stack.Screen
+        options={{
+          title: "Main",
+          headerStyle: { backgroundColor: "#0096FF" },
+        }}
+        name="main"
+        component={Main}
+      /> */}
 
       <stack.Screen
         options={{
