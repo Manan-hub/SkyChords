@@ -16,6 +16,7 @@ const stack = createStackNavigator();
 const Stacknavigator = () => {
   return (
     <stack.Navigator>
+
       <stack.Screen
         options={{
           title: "Main",
@@ -24,12 +25,11 @@ const Stacknavigator = () => {
         name="main"
         component={Main}
       />
-      <stack.Screen
-        options={{ headerShown: false }}
-        name="home"
-        component={Home}
-      />
-
+        <stack.Screen
+          options={{ headerShown: false }}
+          name="home"
+          component={Home}
+        />
       {/* <stack.Screen
         options={{
           title: "Main",

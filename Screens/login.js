@@ -4,7 +4,7 @@ import { VStack, Text, Image, Input, Pressable } from "native-base";
 import { Alert } from "react-native";
 
 const Login = (props) => {
-  const server = axios.create({ baseURL: "http://localhost:5000" });
+  const server = axios.create({ baseURL: "http://localhost:8000" });
   const [username, setUsername] = useState("");
   const [password, setPass] = useState("");
   const [passwordShow, setPassShow] = useState(false);
@@ -22,7 +22,10 @@ const Login = (props) => {
     const resp = await server
       .post("/login", data)
       .then((response) => {
-        flag = response.data["flag"];
+        console.log(response.data)
+        flag = response.data["flag"]
+        global.uid = response.data["UID"];
+        console.log(global.uid);
       })
       .catch((error) => console.log(error));
     console.log(flag);

@@ -3,10 +3,14 @@ import { TouchableOpacity } from "react-native";
 import { VStack, Button, Text, Image } from "native-base";
 
 const Home = (props) => {
+  const getip = () =>{
+    console.log("Get ip called")
+  }
   return (
     <VStack flex="1" backgroundColor="whitesmoke" padding="60px">
-      <TouchableOpacity>
+      <TouchableOpacity onPress={getip}>
         <Image
+          onPress={console.log("heheheh button pressed!")}
           justifyContent="center"
           alignSelf="center"
           source={require("../Assets/Imgs/l.jpeg")}
