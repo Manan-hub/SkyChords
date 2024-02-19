@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { TouchableOpacity } from "react-native";
 import { VStack, Button, Text, Image } from "native-base";
+import { UserContext } from "../hooks/UserContext";
 
 const Home = (props) => {
-  const getip = () =>{
-    console.log("Get ip called")
-  }
+  // const { userData } = useContext(UserContext);
+  // const { ip, port } = userData;
+  const to_ip = () => {
+    props.navigation.navigate("ip");
+    console.log("to_ip runed");
+  };
+
   return (
     <VStack flex="1" backgroundColor="whitesmoke" padding="60px">
-      <TouchableOpacity onPress={getip}>
+      <TouchableOpacity onPress={to_ip}>
         <Image
-          onPress={console.log("heheheh button pressed!")}
           justifyContent="center"
           alignSelf="center"
           source={require("../Assets/Imgs/l.jpeg")}
@@ -21,7 +25,6 @@ const Home = (props) => {
         <Text alignSelf="center" color="#0096FF" fontSize="40">
           SkyChords
         </Text>
-
         {/*login button*/}
         <Button
           width="210px"

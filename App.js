@@ -11,25 +11,25 @@ import Otp from "./Screens/otp";
 import Main from "./Screens/main";
 import Newpass from "./Screens/newpass";
 import Fpotp from "./Screens/fpotp";
+import { UserProvider } from "./hooks/UserContext";
 
 const stack = createStackNavigator();
 const Stacknavigator = () => {
   return (
     <stack.Navigator>
-
-      <stack.Screen
+      {/* <stack.Screen
         options={{
-          title: "Main",
+          title: "Ip",
           headerStyle: { backgroundColor: "#0096FF" },
         }}
-        name="main"
-        component={Main}
+        name="ip"
+        component={Ip}
+      /> */}
+      <stack.Screen
+        options={{ headerShown: false }}
+        name="home"
+        component={Home}
       />
-        <stack.Screen
-          options={{ headerShown: false }}
-          name="home"
-          component={Home}
-        />
       {/* <stack.Screen
         options={{
           title: "Main",
@@ -107,7 +107,9 @@ export default () => {
   return (
     <NavigationContainer>
       <NativeBaseProvider>
-        <Stacknavigator />
+        <UserProvider>
+          <Stacknavigator />
+        </UserProvider>
       </NativeBaseProvider>
     </NavigationContainer>
   );

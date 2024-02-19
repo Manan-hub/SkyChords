@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
 import { VStack, Text, Image, Input, Pressable } from "native-base";
 import { Alert } from "react-native";
+import { UserContext } from "../hooks/UserContext";
 
 const Login = (props) => {
+  const { setUserData } = useContext(UserContext);
   const server = axios.create({ baseURL: "http://localhost:8000" });
   const [username, setUsername] = useState("");
   const [password, setPass] = useState("");
@@ -22,8 +24,8 @@ const Login = (props) => {
     const resp = await server
       .post("/login", data)
       .then((response) => {
-        console.log(response.data)
-        flag = response.data["flag"]
+        console.log(response.data);
+        flag = response.data["flag"];
         global.uid = response.data["UID"];
         console.log(global.uid);
       })
@@ -31,6 +33,7 @@ const Login = (props) => {
     console.log(flag);
     if (flag == true) {
       props.navigation.navigate("main");
+      setUserData((prevUserData) => ({ ...prevUserData, username }));
     } else {
       Alert.alert("Incorrect Credentials!", "Email or password incorrect.");
     }

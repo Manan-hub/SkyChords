@@ -9,187 +9,188 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:3:5-67
-11-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:3:22-64
+11-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:3:5-67
+11-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:3:22-64
 12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-12-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:4:5-80
-12-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:4:22-77
+12-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:4:5-80
+12-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:4:22-77
 13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-13-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:5:5-81
-13-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:5:22-78
+13-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:5:5-81
+13-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:5:22-78
 14    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-14-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:6:5-82
-14-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:6:22-79
+14-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:6:5-82
+14-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:6:22-79
 15    <uses-permission android:name="android.permission.WAKE_LOCK" />
-15-->[:react-native-track-player] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/react-native-track-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-68
-15-->[:react-native-track-player] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/react-native-track-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:22-65
+15-->[:react-native-track-player] D:\SkyChords\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-68
+15-->[:react-native-track-player] D:\SkyChords\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-65
 16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-16-->[:react-native-track-player] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/react-native-track-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-77
-16-->[:react-native-track-player] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/react-native-track-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:8:22-74
+16-->[:react-native-track-player] D:\SkyChords\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-77
+16-->[:react-native-track-player] D:\SkyChords\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:22-74
 17    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" /> <!-- Required to access Google Play Licensing -->
-17-->[:react-native-track-player] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/react-native-track-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-92
-17-->[:react-native-track-player] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/react-native-track-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-89
+17-->[:react-native-track-player] D:\SkyChords\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-92
+17-->[:react-native-track-player] D:\SkyChords\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-89
 18    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
-18-->[:rn-fetch-blob] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-73
-18-->[:rn-fetch-blob] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:8:22-70
+18-->[:rn-fetch-blob] D:\SkyChords\node_modules\rn-fetch-blob\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-73
+18-->[:rn-fetch-blob] D:\SkyChords\node_modules\rn-fetch-blob\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:22-70
 19    <!--
 20         Required to poll the state of the network connection
 21        and respond to changes
 22    -->
 23    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required to check whether Wi-Fi is enabled -->
-23-->[:rn-fetch-blob] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:5-79
-23-->[:rn-fetch-blob] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:22-76
+23-->[:rn-fetch-blob] D:\SkyChords\node_modules\rn-fetch-blob\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:5-79
+23-->[:rn-fetch-blob] D:\SkyChords\node_modules\rn-fetch-blob\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:22-76
 24    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-24-->[:rn-fetch-blob] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:5-76
-24-->[:rn-fetch-blob] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:22-73
+24-->[:rn-fetch-blob] D:\SkyChords\node_modules\rn-fetch-blob\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:5-76
+24-->[:rn-fetch-blob] D:\SkyChords\node_modules\rn-fetch-blob\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:22-73
 25    <!--
 26    This manifest file is used only by Gradle to configure debug-only capabilities
 27    for React Native Apps.
 28    -->
 29    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-29-->[com.facebook.react:react-android:0.73.1] /home/ikigai/.gradle/caches/transforms-3/65f520f887f0d0f390437980af8cd371/transformed/jetified-react-android-0.73.1-debug/AndroidManifest.xml:16:5-78
-29-->[com.facebook.react:react-android:0.73.1] /home/ikigai/.gradle/caches/transforms-3/65f520f887f0d0f390437980af8cd371/transformed/jetified-react-android-0.73.1-debug/AndroidManifest.xml:16:22-75
+29-->[com.facebook.react:react-android:0.73.1] C:\Users\shahm\.gradle\caches\transforms-3\65f520f887f0d0f390437980af8cd371\transformed\jetified-react-android-0.73.1-debug\AndroidManifest.xml:16:5-78
+29-->[com.facebook.react:react-android:0.73.1] C:\Users\shahm\.gradle\caches\transforms-3\65f520f887f0d0f390437980af8cd371\transformed\jetified-react-android-0.73.1-debug\AndroidManifest.xml:16:22-75
 30
 31    <permission
-31-->[androidx.core:core:1.9.0] /home/ikigai/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+31-->[androidx.core:core:1.9.0] C:\Users\shahm\.gradle\caches\transforms-3\13659b94c66de92d98d7f8af61234b95\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 32        android:name="com.skychords.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-32-->[androidx.core:core:1.9.0] /home/ikigai/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+32-->[androidx.core:core:1.9.0] C:\Users\shahm\.gradle\caches\transforms-3\13659b94c66de92d98d7f8af61234b95\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 33        android:protectionLevel="signature" />
-33-->[androidx.core:core:1.9.0] /home/ikigai/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+33-->[androidx.core:core:1.9.0] C:\Users\shahm\.gradle\caches\transforms-3\13659b94c66de92d98d7f8af61234b95\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 34
 35    <uses-permission android:name="com.skychords.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-35-->[androidx.core:core:1.9.0] /home/ikigai/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-35-->[androidx.core:core:1.9.0] /home/ikigai/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+35-->[androidx.core:core:1.9.0] C:\Users\shahm\.gradle\caches\transforms-3\13659b94c66de92d98d7f8af61234b95\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+35-->[androidx.core:core:1.9.0] C:\Users\shahm\.gradle\caches\transforms-3\13659b94c66de92d98d7f8af61234b95\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 36
 37    <queries>
-37-->[androidx.test:runner:1.4.0] /home/ikigai/.gradle/caches/transforms-3/4b85a2f84e3f8416644fe2e347c4be9e/transformed/runner-1.4.0/AndroidManifest.xml:24:5-28:15
+37-->[androidx.test:runner:1.4.0] C:\Users\shahm\.gradle\caches\transforms-3\4b85a2f84e3f8416644fe2e347c4be9e\transformed\runner-1.4.0\AndroidManifest.xml:24:5-28:15
 38        <package android:name="androidx.test.orchestrator" />
-38-->[androidx.test:runner:1.4.0] /home/ikigai/.gradle/caches/transforms-3/4b85a2f84e3f8416644fe2e347c4be9e/transformed/runner-1.4.0/AndroidManifest.xml:25:9-62
-38-->[androidx.test:runner:1.4.0] /home/ikigai/.gradle/caches/transforms-3/4b85a2f84e3f8416644fe2e347c4be9e/transformed/runner-1.4.0/AndroidManifest.xml:25:18-59
+38-->[androidx.test:runner:1.4.0] C:\Users\shahm\.gradle\caches\transforms-3\4b85a2f84e3f8416644fe2e347c4be9e\transformed\runner-1.4.0\AndroidManifest.xml:25:9-62
+38-->[androidx.test:runner:1.4.0] C:\Users\shahm\.gradle\caches\transforms-3\4b85a2f84e3f8416644fe2e347c4be9e\transformed\runner-1.4.0\AndroidManifest.xml:25:18-59
 39        <package android:name="androidx.test.services" />
-39-->[androidx.test:runner:1.4.0] /home/ikigai/.gradle/caches/transforms-3/4b85a2f84e3f8416644fe2e347c4be9e/transformed/runner-1.4.0/AndroidManifest.xml:26:9-58
-39-->[androidx.test:runner:1.4.0] /home/ikigai/.gradle/caches/transforms-3/4b85a2f84e3f8416644fe2e347c4be9e/transformed/runner-1.4.0/AndroidManifest.xml:26:18-55
+39-->[androidx.test:runner:1.4.0] C:\Users\shahm\.gradle\caches\transforms-3\4b85a2f84e3f8416644fe2e347c4be9e\transformed\runner-1.4.0\AndroidManifest.xml:26:9-58
+39-->[androidx.test:runner:1.4.0] C:\Users\shahm\.gradle\caches\transforms-3\4b85a2f84e3f8416644fe2e347c4be9e\transformed\runner-1.4.0\AndroidManifest.xml:26:18-55
 40        <package android:name="com.google.android.apps.common.testing.services" />
-40-->[androidx.test:runner:1.4.0] /home/ikigai/.gradle/caches/transforms-3/4b85a2f84e3f8416644fe2e347c4be9e/transformed/runner-1.4.0/AndroidManifest.xml:27:9-83
-40-->[androidx.test:runner:1.4.0] /home/ikigai/.gradle/caches/transforms-3/4b85a2f84e3f8416644fe2e347c4be9e/transformed/runner-1.4.0/AndroidManifest.xml:27:18-80
+40-->[androidx.test:runner:1.4.0] C:\Users\shahm\.gradle\caches\transforms-3\4b85a2f84e3f8416644fe2e347c4be9e\transformed\runner-1.4.0\AndroidManifest.xml:27:9-83
+40-->[androidx.test:runner:1.4.0] C:\Users\shahm\.gradle\caches\transforms-3\4b85a2f84e3f8416644fe2e347c4be9e\transformed\runner-1.4.0\AndroidManifest.xml:27:18-80
 41    </queries>
 42
 43    <application
-43-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:7:5-26:19
+43-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:7:5-26:19
 44        android:name="com.skychords.MainApplication"
-44-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:8:7-38
+44-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:8:7-38
 45        android:allowBackup="false"
-45-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:12:7-34
+45-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:12:7-34
 46        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-46-->[androidx.core:core:1.9.0] /home/ikigai/.gradle/caches/transforms-3/13659b94c66de92d98d7f8af61234b95/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+46-->[androidx.core:core:1.9.0] C:\Users\shahm\.gradle\caches\transforms-3\13659b94c66de92d98d7f8af61234b95\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 47        android:debuggable="true"
 48        android:extractNativeLibs="true"
 49        android:icon="@mipmap/ic_launcher"
-49-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:10:7-41
+49-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:10:7-41
 50        android:label="@string/app_name"
-50-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:9:7-39
+50-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:9:7-39
 51        android:roundIcon="@mipmap/ic_launcher_round"
-51-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:11:7-52
-52        android:theme="@style/AppTheme"
-52-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:13:7-38
-53        android:usesCleartextTraffic="true" >
-53-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/debug/AndroidManifest.xml:6:9-44
-54        <activity
-54-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:14:7-25:18
-55            android:name="com.skychords.MainActivity"
-55-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:15:9-37
-56            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-56-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:17:9-118
-57            android:exported="true"
-57-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:20:9-32
-58            android:label="@string/app_name"
-58-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:16:9-41
-59            android:launchMode="singleTask"
-59-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:18:9-40
-60            android:windowSoftInputMode="adjustResize" >
-60-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:19:9-51
-61            <intent-filter>
-61-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:21:9-24:25
-62                <action android:name="android.intent.action.MAIN" />
-62-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:22:13-65
-62-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:22:21-62
-63
-64                <category android:name="android.intent.category.LAUNCHER" />
-64-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:23:13-73
-64-->/home/ikigai/sky-chords/sky-chords-frontend/SkyChords/android/app/src/main/AndroidManifest.xml:23:23-70
-65            </intent-filter>
-66        </activity> <!-- The main service, handles playback, playlists and media buttons -->
-67        <service
-67-->[:react-native-track-player] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/react-native-track-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-22:19
-68            android:name="com.doublesymmetry.trackplayer.service.MusicService"
-68-->[:react-native-track-player] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/react-native-track-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-79
-69            android:enabled="true"
-69-->[:react-native-track-player] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/react-native-track-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-35
-70            android:exported="true"
-70-->[:react-native-track-player] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/react-native-track-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-36
-71            android:foregroundServiceType="mediaPlayback" >
-71-->[:react-native-track-player] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/react-native-track-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-58
-72            <intent-filter>
-72-->[:react-native-track-player] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/react-native-track-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-21:29
-73                <action android:name="android.intent.action.MEDIA_BUTTON" />
-73-->[:react-native-track-player] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/react-native-track-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:17-77
-73-->[:react-native-track-player] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/react-native-track-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:25-74
-74            </intent-filter>
-75        </service>
-76
-77        <provider
-77-->[:rn-fetch-blob] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:32:9-40:20
-78            android:name="com.RNFetchBlob.Utils.FileProvider"
-78-->[:rn-fetch-blob] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:33:13-62
-79            android:authorities="com.skychords.provider"
-79-->[:rn-fetch-blob] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:13-60
-80            android:exported="false"
-80-->[:rn-fetch-blob] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:13-37
-81            android:grantUriPermissions="true" >
-81-->[:rn-fetch-blob] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-47
-82            <meta-data
-82-->[:rn-fetch-blob] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-39:58
-83                android:name="android.support.FILE_PROVIDER_PATHS"
-83-->[:rn-fetch-blob] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:17-67
-84                android:resource="@xml/provider_paths" />
-84-->[:rn-fetch-blob] /home/ikigai/sky-chords/sky-chords-frontend/SkyChords/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:39:17-55
-85        </provider>
-86
-87        <activity
-87-->[com.facebook.react:react-android:0.73.1] /home/ikigai/.gradle/caches/transforms-3/65f520f887f0d0f390437980af8cd371/transformed/jetified-react-android-0.73.1-debug/AndroidManifest.xml:19:9-21:40
-88            android:name="com.facebook.react.devsupport.DevSettingsActivity"
-88-->[com.facebook.react:react-android:0.73.1] /home/ikigai/.gradle/caches/transforms-3/65f520f887f0d0f390437980af8cd371/transformed/jetified-react-android-0.73.1-debug/AndroidManifest.xml:20:13-77
-89            android:exported="false" />
-89-->[com.facebook.react:react-android:0.73.1] /home/ikigai/.gradle/caches/transforms-3/65f520f887f0d0f390437980af8cd371/transformed/jetified-react-android-0.73.1-debug/AndroidManifest.xml:21:13-37
-90
-91        <provider
-91-->[androidx.emoji2:emoji2:1.2.0] /home/ikigai/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-92            android:name="androidx.startup.InitializationProvider"
-92-->[androidx.emoji2:emoji2:1.2.0] /home/ikigai/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
-93            android:authorities="com.skychords.androidx-startup"
-93-->[androidx.emoji2:emoji2:1.2.0] /home/ikigai/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
-94            android:exported="false" >
-94-->[androidx.emoji2:emoji2:1.2.0] /home/ikigai/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
-95            <meta-data
-95-->[androidx.emoji2:emoji2:1.2.0] /home/ikigai/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-96                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-96-->[androidx.emoji2:emoji2:1.2.0] /home/ikigai/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
-97                android:value="androidx.startup" />
-97-->[androidx.emoji2:emoji2:1.2.0] /home/ikigai/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
-98            <meta-data
-98-->[androidx.lifecycle:lifecycle-process:2.5.1] /home/ikigai/.gradle/caches/transforms-3/d3b7d5859dc925d6c6e9cb951610d0af/transformed/jetified-lifecycle-process-2.5.1/AndroidManifest.xml:31:13-33:52
-99                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-99-->[androidx.lifecycle:lifecycle-process:2.5.1] /home/ikigai/.gradle/caches/transforms-3/d3b7d5859dc925d6c6e9cb951610d0af/transformed/jetified-lifecycle-process-2.5.1/AndroidManifest.xml:32:17-78
-100                android:value="androidx.startup" />
-100-->[androidx.lifecycle:lifecycle-process:2.5.1] /home/ikigai/.gradle/caches/transforms-3/d3b7d5859dc925d6c6e9cb951610d0af/transformed/jetified-lifecycle-process-2.5.1/AndroidManifest.xml:33:17-49
-101        </provider>
-102
-103        <meta-data
-103-->[com.facebook.soloader:soloader:0.10.5] /home/ikigai/.gradle/caches/transforms-3/03d018e18e7118763cc731de8f689ba0/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:12:9-14:37
-104            android:name="com.facebook.soloader.enabled"
-104-->[com.facebook.soloader:soloader:0.10.5] /home/ikigai/.gradle/caches/transforms-3/03d018e18e7118763cc731de8f689ba0/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:13:13-57
-105            android:value="false" />
-105-->[com.facebook.soloader:soloader:0.10.5] /home/ikigai/.gradle/caches/transforms-3/03d018e18e7118763cc731de8f689ba0/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:14:13-34
-106    </application>
-107
-108</manifest>
+51-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:11:7-52
+52        android:testOnly="true"
+53        android:theme="@style/AppTheme"
+53-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:13:7-38
+54        android:usesCleartextTraffic="true" >
+54-->D:\SkyChords\android\app\src\debug\AndroidManifest.xml:6:9-44
+55        <activity
+55-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:14:7-25:18
+56            android:name="com.skychords.MainActivity"
+56-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:15:9-37
+57            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+57-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:17:9-118
+58            android:exported="true"
+58-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:20:9-32
+59            android:label="@string/app_name"
+59-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:16:9-41
+60            android:launchMode="singleTask"
+60-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:18:9-40
+61            android:windowSoftInputMode="adjustResize" >
+61-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:19:9-51
+62            <intent-filter>
+62-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:21:9-24:25
+63                <action android:name="android.intent.action.MAIN" />
+63-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:22:13-65
+63-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:22:21-62
+64
+65                <category android:name="android.intent.category.LAUNCHER" />
+65-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:23:13-73
+65-->D:\SkyChords\android\app\src\main\AndroidManifest.xml:23:23-70
+66            </intent-filter>
+67        </activity> <!-- The main service, handles playback, playlists and media buttons -->
+68        <service
+68-->[:react-native-track-player] D:\SkyChords\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:9-22:19
+69            android:name="com.doublesymmetry.trackplayer.service.MusicService"
+69-->[:react-native-track-player] D:\SkyChords\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-79
+70            android:enabled="true"
+70-->[:react-native-track-player] D:\SkyChords\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-35
+71            android:exported="true"
+71-->[:react-native-track-player] D:\SkyChords\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-36
+72            android:foregroundServiceType="mediaPlayback" >
+72-->[:react-native-track-player] D:\SkyChords\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-58
+73            <intent-filter>
+73-->[:react-native-track-player] D:\SkyChords\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-21:29
+74                <action android:name="android.intent.action.MEDIA_BUTTON" />
+74-->[:react-native-track-player] D:\SkyChords\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:17-77
+74-->[:react-native-track-player] D:\SkyChords\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:25-74
+75            </intent-filter>
+76        </service>
+77
+78        <provider
+78-->[:rn-fetch-blob] D:\SkyChords\node_modules\rn-fetch-blob\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:32:9-40:20
+79            android:name="com.RNFetchBlob.Utils.FileProvider"
+79-->[:rn-fetch-blob] D:\SkyChords\node_modules\rn-fetch-blob\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:33:13-62
+80            android:authorities="com.skychords.provider"
+80-->[:rn-fetch-blob] D:\SkyChords\node_modules\rn-fetch-blob\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:13-60
+81            android:exported="false"
+81-->[:rn-fetch-blob] D:\SkyChords\node_modules\rn-fetch-blob\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:13-37
+82            android:grantUriPermissions="true" >
+82-->[:rn-fetch-blob] D:\SkyChords\node_modules\rn-fetch-blob\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:13-47
+83            <meta-data
+83-->[:rn-fetch-blob] D:\SkyChords\node_modules\rn-fetch-blob\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:37:13-39:58
+84                android:name="android.support.FILE_PROVIDER_PATHS"
+84-->[:rn-fetch-blob] D:\SkyChords\node_modules\rn-fetch-blob\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:38:17-67
+85                android:resource="@xml/provider_paths" />
+85-->[:rn-fetch-blob] D:\SkyChords\node_modules\rn-fetch-blob\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:39:17-55
+86        </provider>
+87
+88        <activity
+88-->[com.facebook.react:react-android:0.73.1] C:\Users\shahm\.gradle\caches\transforms-3\65f520f887f0d0f390437980af8cd371\transformed\jetified-react-android-0.73.1-debug\AndroidManifest.xml:19:9-21:40
+89            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+89-->[com.facebook.react:react-android:0.73.1] C:\Users\shahm\.gradle\caches\transforms-3\65f520f887f0d0f390437980af8cd371\transformed\jetified-react-android-0.73.1-debug\AndroidManifest.xml:20:13-77
+90            android:exported="false" />
+90-->[com.facebook.react:react-android:0.73.1] C:\Users\shahm\.gradle\caches\transforms-3\65f520f887f0d0f390437980af8cd371\transformed\jetified-react-android-0.73.1-debug\AndroidManifest.xml:21:13-37
+91
+92        <provider
+92-->[androidx.emoji2:emoji2:1.2.0] C:\Users\shahm\.gradle\caches\transforms-3\faa3592d2fc203d6c74b9a5f601058a1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+93            android:name="androidx.startup.InitializationProvider"
+93-->[androidx.emoji2:emoji2:1.2.0] C:\Users\shahm\.gradle\caches\transforms-3\faa3592d2fc203d6c74b9a5f601058a1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+94            android:authorities="com.skychords.androidx-startup"
+94-->[androidx.emoji2:emoji2:1.2.0] C:\Users\shahm\.gradle\caches\transforms-3\faa3592d2fc203d6c74b9a5f601058a1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+95            android:exported="false" >
+95-->[androidx.emoji2:emoji2:1.2.0] C:\Users\shahm\.gradle\caches\transforms-3\faa3592d2fc203d6c74b9a5f601058a1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+96            <meta-data
+96-->[androidx.emoji2:emoji2:1.2.0] C:\Users\shahm\.gradle\caches\transforms-3\faa3592d2fc203d6c74b9a5f601058a1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+97                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+97-->[androidx.emoji2:emoji2:1.2.0] C:\Users\shahm\.gradle\caches\transforms-3\faa3592d2fc203d6c74b9a5f601058a1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+98                android:value="androidx.startup" />
+98-->[androidx.emoji2:emoji2:1.2.0] C:\Users\shahm\.gradle\caches\transforms-3\faa3592d2fc203d6c74b9a5f601058a1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+99            <meta-data
+99-->[androidx.lifecycle:lifecycle-process:2.5.1] C:\Users\shahm\.gradle\caches\transforms-3\d3b7d5859dc925d6c6e9cb951610d0af\transformed\jetified-lifecycle-process-2.5.1\AndroidManifest.xml:31:13-33:52
+100                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+100-->[androidx.lifecycle:lifecycle-process:2.5.1] C:\Users\shahm\.gradle\caches\transforms-3\d3b7d5859dc925d6c6e9cb951610d0af\transformed\jetified-lifecycle-process-2.5.1\AndroidManifest.xml:32:17-78
+101                android:value="androidx.startup" />
+101-->[androidx.lifecycle:lifecycle-process:2.5.1] C:\Users\shahm\.gradle\caches\transforms-3\d3b7d5859dc925d6c6e9cb951610d0af\transformed\jetified-lifecycle-process-2.5.1\AndroidManifest.xml:33:17-49
+102        </provider>
+103
+104        <meta-data
+104-->[com.facebook.soloader:soloader:0.10.5] C:\Users\shahm\.gradle\caches\transforms-3\03d018e18e7118763cc731de8f689ba0\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:12:9-14:37
+105            android:name="com.facebook.soloader.enabled"
+105-->[com.facebook.soloader:soloader:0.10.5] C:\Users\shahm\.gradle\caches\transforms-3\03d018e18e7118763cc731de8f689ba0\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:13:13-57
+106            android:value="false" />
+106-->[com.facebook.soloader:soloader:0.10.5] C:\Users\shahm\.gradle\caches\transforms-3\03d018e18e7118763cc731de8f689ba0\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:14:13-34
+107    </application>
+108
+109</manifest>
