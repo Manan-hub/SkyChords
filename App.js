@@ -17,6 +17,14 @@ const stack = createStackNavigator();
 const Stacknavigator = () => {
   return (
     <stack.Navigator>
+      <stack.Screen
+        options={{
+          title: "Main",
+          headerStyle: { backgroundColor: "#0096FF" },
+        }}
+        name="main"
+        component={Main}
+      />
       {/* <stack.Screen
         options={{
           title: "Ip",
@@ -30,14 +38,6 @@ const Stacknavigator = () => {
         name="home"
         component={Home}
       />
-      {/* <stack.Screen
-        options={{
-          title: "Main",
-          headerStyle: { backgroundColor: "#0096FF" },
-        }}
-        name="main"
-        component={Main}
-      /> */}
 
       <stack.Screen
         options={{

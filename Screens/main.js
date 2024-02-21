@@ -15,8 +15,7 @@ import {
 import { format } from "react-string-format";
 import { Alert, TouchableOpacity } from "react-native";
 import { pause } from "react-native-track-player/lib/trackPlayer";
-// const cars = ["Saab", "Volvo", "BMW", "cff"];
-// const cars2 = cars;
+
 const called = 0;
 global.uid = 20240001;
 playing = false;
@@ -194,6 +193,34 @@ const Main = () => {
         >
           <Text>{chords_name}</Text>
         </Badge>
+        <Select
+          h="45px"
+          marginTop="5px"
+          width="260px"
+          justifyContent="center"
+          alignSelf="center"
+          borderRadius="10px"
+          backgroundColor="#89CFF0"
+          selectedValue={favourite}
+          placeholder="Click to access Favourite"
+          placeholderTextColor="black"
+          _selectedItem={{
+            bg: "#89CFF0",
+            borderRadius: "10px",
+            borderWidth: "1px",
+            borderColor: "white",
+          }}
+          onValueChange={(itemValue) => setfavourite(itemValue)}
+        >
+          {favourite_array.map((favourite, index) => (
+            <Select.Item
+              shadow={2}
+              label={favourite}
+              value={favourite}
+              key={index}
+            />
+          ))}
+        </Select>
         <HStack mt="auto">
           <Pressable
             w="80px"
@@ -207,8 +234,13 @@ const Main = () => {
           >
             <Text>{playtext}</Text>
           </Pressable>
-          <VStack px="10px" space="3">
-            <HStack space="4">
+          <VStack
+            paddingLeft="10px"
+            justifyContent="center"
+            alignItems="center"
+            space="3"
+          >
+            <HStack space="3">
               <Select
                 shadow={2}
                 selectedValue={key}
@@ -257,7 +289,7 @@ const Main = () => {
             <Select
               shadow={2}
               selectedValue={arp}
-              minWidth="100px"
+              minWidth="220px"
               placeholder="Arp"
               _selectedItem={{
                 bg: "#89CFF0",
@@ -303,16 +335,16 @@ const Main = () => {
         </HStack>
         <HStack justifyContent="center" paddingTop="10px">
           <Pressable
-            w="200px"
+            borderRadius="10px"
+            flex={1}
             h="40px"
             backgroundColor="#89CFF0"
-            borderRadius="10px"
             justifyContent="center"
             alignItems="center"
-            onPress={generateChords}
+            onPress={AddFavourite}
             _pressed={{ backgroundColor: "#c7e1ed" }}
           >
-            <Text>Generate</Text>
+            <Text>Add To Favourite</Text>
           </Pressable>
         </HStack>
       </VStack>
@@ -323,45 +355,18 @@ const Main = () => {
         space={1}
         width="100%"
       >
-        <Select
-          flex={1}
-          backgroundColor="#89CFF0"
-          borderTopRadius="10px"
-          selectedValue={favourite}
-          justifyContent="center"
-          alignItems="center"
-          placeholder="Favourite"
-          _selectedItem={{
-            bg: "#89CFF0",
-            borderRadius: "10px",
-            borderWidth: "1px",
-            borderColor: "white",
-          }}
-          onValueChange={(itemValue) => setfavourite(itemValue)}
-          onOpen={() => {
-            console.log("hiii");
-          }}
-        >
-          {favourite_array.map((favourite, index) => (
-            <Select.Item
-              shadow={2}
-              label={favourite}
-              value={favourite}
-              key={index}
-            />
-          ))}
-        </Select>
         <Pressable
           flex={1}
-          h="40px"
-          backgroundColor="#89CFF0"
+          w="200px"
+          h="50px"
           borderTopRadius="10px"
+          backgroundColor="#89CFF0"
           justifyContent="center"
           alignItems="center"
-          onPress={AddFavourite}
+          onPress={generateChords}
           _pressed={{ backgroundColor: "#c7e1ed" }}
         >
-          <Text>Add To Favourite</Text>
+          <Text>Generate</Text>
         </Pressable>
       </HStack>
     </>
