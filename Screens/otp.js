@@ -1,14 +1,29 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { StyleSheet, Alert } from "react-native";
 import { VStack, Text, Input, Pressable } from "native-base";
-
+import { UserContext } from "../hooks/UserContext";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const Otp = (props) => {
+  let uid;
+  const { setUserData } = useContext(UserContext);
+  const { userData } = useContext(UserContext);
+  const { ip, port} = userData;
   const username = props.route.params["username"];
   const password = props.route.params["password"];
   const [otpShow, setMotp] = useState(false);
   const [otp, setotp] = useState("");
-  const server = axios.create({ baseURL: "http://localhost:5000" });
+  const server = axios.create({ baseURL: `http://${ip}:${port}` });
+  const storeData = async(data) =>{
+    try{
+      console.log("data =========",data.passw);
+      AsyncStorage.setItem('username',data.user);
+      AsyncStorage.setItem('password',data.passw);
+    }
+    catch(e){
+      console.log(e);
+    }
+  }
 
   const FireApi = async () => {
     if (otp == "") {
@@ -24,10 +39,13 @@ const Otp = (props) => {
       .post("/signup", data)
       .then((response) => {
         flag = response.data["flag"];
+        uid = response.data['uid'];
       })
       .catch((error) => console.log(error));
     console.log(flag);
     if (flag == true) {
+      storeData(data);
+      setUserData((prevUserData) => ({ ...prevUserData, uid}));
       props.navigation.navigate("main");
     }
     if (flag == false) {

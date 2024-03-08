@@ -3,7 +3,9 @@ import axios from "axios";
 import { VStack, Text, Input, Pressable } from "native-base";
 
 const Forgotpass = (props) => {
-  const server = axios.create({ baseURL: "http://localhost:5000" });
+  const { userData } = useContext(UserContext);
+  const { ip, port} = userData;
+  const server = axios.create({ baseURL: `http://${ip}:${port}` });
   const [username, setUsername] = useState("");
   const [EmailShow, setEmailShow] = useState(false);
   const FireApi = async () => {
@@ -18,10 +20,10 @@ const Forgotpass = (props) => {
     const resp = await server
       .post("/forgotpassword", data)
       .then((response) => {
-        flag = response.data["flag"];
+        flag = response.data.forgotpasswordflag;
       })
       .catch((error) => console.log(error));
-    console.log(flag);
+    console.log("flag hehe",flag);
     if (flag == true) {
       props.navigation.navigate("fpotp", {
         username: username,
@@ -71,9 +73,9 @@ const Forgotpass = (props) => {
         marginLeft="auto"
         onPress={() => {
           FireApi();
-          props.navigation.navigate("newpass", {
-            // username: username,
-          });
+          // props.navigation.navigate("newpass", {
+          //   // username: username,
+          // });
         }}
       >
         <Text color="#0096FF">Send</Text>

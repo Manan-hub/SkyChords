@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios, { formToJSON } from "axios";
+import { UserContext } from "../hooks/UserContext";
 import { Alert } from "react-native";
 import { VStack, Text, Image, Input, Pressable } from "native-base";
 
 const Signup = (props) => {
-  const server = axios.create({ baseURL: "http://localhost:5000" });
+  const { userData } = useContext(UserContext);
+  const { ip, port} = userData;
+  const server = axios.create({ baseURL: `http://${ip}:${port}` });
   const [username, setUsername] = useState("");
   const [password, setPass] = useState("");
   const [cpassword, setCpass] = useState("");

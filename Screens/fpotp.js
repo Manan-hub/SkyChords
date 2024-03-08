@@ -12,9 +12,11 @@ import {
 const Otp = (props) => {
   const username = props.route.params["username"];
   //   const password = props.route.params['password']
+  const { userData } = useContext(UserContext);
+  const { ip, port} = userData;
   const [otpShow, setMotp] = useState(false);
   const [otp, setotp] = useState("");
-  const server = axios.create({ baseURL: "http://localhost:5000" });
+  const server = axios.create({ baseURL: `http://${ip}:${port}` });
 
   const FireApi = async () => {
     if (otp == "") {

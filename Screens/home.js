@@ -1,8 +1,54 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { TouchableOpacity } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { VStack, Button, Text, Image } from "native-base";
+import { UserContext } from "../hooks/UserContext";
+import axios, { all } from "axios";
 
 const Home = (props) => {
+  let username;
+  let password;
+  let uid;
+  const { userData } = useContext(UserContext);
+  const { setUserData } = useContext(UserContext);
+  const { ip, port } = userData;
+  console.log(ip, port);
+  const url = `http://${ip}:${port}`;
+  const server = axios.create({ baseURL: url });
+  const Login = async () => {
+    try {
+      username = await AsyncStorage.getItem("username");
+      password = await AsyncStorage.getItem("password");
+      console.log(username, password);
+    } catch (e) {
+      console.log(e);
+    }
+    data = {
+      user: username,
+      passw: password,
+    };
+    console.log("data :- ", data);
+    const resp = await server
+      .post("/login", data)
+      .then((response) => {
+        console.log(response.data);
+        flag = response.data["flag"];
+        uid = response.data["UID"];
+      })
+      .catch((error) => console.log(error));
+    console.log(flag);
+    if (flag == true) {
+      setUserData((prevUserData) => ({ ...prevUserData, uid }));
+      props.navigation.navigate("main");
+    }
+  };
+  useEffect(() => {
+    Login();
+  }, []);
+  const to_ip = async () => {
+    props.navigation.navigate("ip");
+    console.log("to_ip runed");
+  };
   return (
     <VStack flex="1" backgroundColor="whitesmoke" padding="60px">
       <TouchableOpacity>

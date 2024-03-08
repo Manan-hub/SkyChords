@@ -1,16 +1,33 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState, useContext } from "react";
 import { VStack, Text, Image, Input, Pressable } from "native-base";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Alert } from "react-native";
-
+import axios, { all } from "axios";
+import { UserContext } from "../hooks/UserContext";
 const Login = (props) => {
-  const server = axios.create({ baseURL: "http://localhost:5000" });
+  let uid;
+  const { userData } = useContext(UserContext);
+  const { ip, port } = userData;
+  const { setUserData } = useContext(UserContext);
   const [username, setUsername] = useState("");
   const [password, setPass] = useState("");
   const [passwordShow, setPassShow] = useState(false);
   const [EmailShow, setEmailShow] = useState(false);
+  const url = `http://${ip}:${port}`;
+  const server = axios.create({ baseURL: url });
+
+  const storeData = async (data) => {
+    try {
+      console.log("data =========", data.passw);
+      AsyncStorage.setItem("username", data.user);
+      AsyncStorage.setItem("password", data.passw);
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   const FireApi = async () => {
+    console.log("server =====", server.defaults.baseURL);
     if ((username == "") | (password == "")) {
       console.log("Empty");
       return;
@@ -23,11 +40,14 @@ const Login = (props) => {
       .post("/login", data)
       .then((response) => {
         flag = response.data["flag"];
+        uid = response.data["UID"];
       })
       .catch((error) => console.log(error));
     console.log(flag);
     if (flag == true) {
+      storeData(data);
       props.navigation.navigate("main");
+      setUserData((prevUserData) => ({ ...prevUserData, uid }));
     } else {
       Alert.alert("Incorrect Credentials!", "Email or password incorrect.");
     }

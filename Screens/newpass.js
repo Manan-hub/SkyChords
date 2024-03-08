@@ -10,7 +10,9 @@ import {
 import { VStack, Text, Image, Input, Pressable } from "native-base";
 
 const Newpass = (props) => {
-  const server = axios.create({ baseURL: "http://localhost:5000" });
+  const { userData } = useContext(UserContext);
+  const { ip, port} = userData;
+  const server = axios.create({ baseURL: `http://${ip}:${port}` });
   const username = props.route.params["username"];
   const [password, setPass] = useState("");
   const [cpassword, setCpass] = useState("");
